@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Angelico Salazar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  * {
+
+    letter-spacing: 2px;
+  }
+  body {
+
+    padding-top: 60px;
+    position: relative; 
+  }
+  #home, #about, #skills, #projects {
+
+    padding-top: 40px;
+    margin-top: -40px;
+  }
+  #angelicoImage {
+
+    filter: grayscale(100%);
+  }
+  .black {
+
+    color: #333;
+  }
+  .skillDetails {
+
+    color: #666;
+    text-align: center;
+    background-color:  #f2f2f2;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  .skillList {
+
+    text-align: center;    
+    padding: 6px;
+  }
+  .skillListItem {
+
+    color: #666;
+    border: 1px solid #666;
+    margin: 4px 1px 4px 1px;
+    padding: 6px 12px 6px 12px;
+    display: inline-block;
+  }
+  .skillListItem:hover {
+
+    color: #333;
+    border: 1px solid #ccc;
+    background-color:  #f2f2f2;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="20">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#home"><span class="glyphicon glyphicon-home"></span> home</a></li>
+        <li><a href="#about"><span class="glyphicon glyphicon-user"></span> about</a></li>
+        <li><a href="#skills"><span class="glyphicon glyphicon-align-left"></span> skills</a></li>
+        <li><a href="#projects"><span class="glyphicon glyphicon-briefcase"></span> projects</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href=""><span class="glyphicon glyphicon-file"></span> resume</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron" id="home">
+  <div class="container text-center">
+    <h1>Angelico Salazar</h1>
+    <p>A programmer who loves to make ideas come to life.</p>
+    <img src="angelico.jpg" class="img-circle" height="200" id="angelicoImage"/>
+  </div>
+</div>
+
+<div class="container-fluid" id="about">
+  <h2>About</h2>
+  <p>
+    Angelico thrives on his: <b>sense of curiousity, creative thinking, and passion for technology</b>.
+  </p>
+  <p>
+    During his studies in primary and secondary school, Angelico consistently excelled in classes involving: Science, Technology, Engineering, and Mathematics. Angelico then continued his studies at the <b>University of Windsor</b>, and eventually obtained his <b>Honours Degree in Computer Science (with Great Distinction)</b> in May of 2017.
+  </p>
+  <p>
+    Angelico worked as a <b>Teaching Assistant</b> at the <b>University of Windsor</b> for the following courses: Advanced Website Design, Computer Concepts for End-Users, Introduction to Algorithms and Programming II, and Introduction to the Internet. He also worked (and continues to work) at <b>CIBC Wood Gundy</b> as a part-time <b>Sales Assistant / Programmer</b>.
+  </p>
+  <p>
+    On his free time, Angelico enjoys working on his personal projects to learn new (or sharpen his existing) technical skills. He also likes to ensure a healthy lifestyle by following a daily workout routine.
+  </p>
+</div>
+
+<div class="container-fluid" id="skills">
+  <h2>Skills</h2>
+
+  <div class="skillDetails"></div>
+
+  <div class="skillList"></div>
+
+</div>
+
+<div class="container-fluid" id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>Android Application | Expense Tracker (Coming Soon)</li>
+  </ul>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>© 2017 Angelico Salazar</p>
+</footer>
+
+<script type="text/javascript">
+  $(document).on('click','.navbar-collapse.in',function(e) {
+      if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+          $(this).collapse('hide');
+      }
+  });
+
+  var skillDict = {
+    "Java": ["Languages", "* * * * -"],
+    "Python": ["Languages", "* * * * -"],
+    "C": ["Languages", "* * * - -"],
+    "C#": ["Languages", "* * * - -"],
+    "HTML": ["Languages", "* * * * -"],
+    "CSS": ["Languages", "* * * - -"],
+    "Javascript": ["Languages", "* * * - -"], 
+    "PHP": ["Languages", "* * * - -"],
+    "SQL": ["Languages", "* * * - -"],
+    "Git / Github": ["Tools", "* * * - -"],
+    "Eclipse": ["Tools", "* * * * -"],
+    "Android Studio": ["Tools", "* * - - -"],
+    "Microsoft Office": ["Tools", "* * * * -"]
+  };
+
+  var keyList = []
+
+  for(var key in skillDict){
+
+    keyList.push(key);
+  }
+
+  function skillDetails(i){
+
+    $(".skillDetails").html("<h3 class='black'>" + keyList[i] + "</h3> <p>Category: <b class='black'>" + (skillDict[keyList[i]])[0] + "</b></p> <p>Proficiency: <b class='black'>" + (skillDict[keyList[i]])[1] + "</b></p>");
+  }
+
+  skillDetails(0);
+
+  for(var i = 0 ; i < keyList.length ; i++){
+
+   $(".skillList").append("<div class='skillListItem' onmouseover='skillDetails(" + i + ")'>" + keyList[i] + "</div> ");
+  }
+</script>
+
+</body>
+</html>
