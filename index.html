@@ -30,14 +30,6 @@
 
     color: #333;
   }
-  .skillDetails {
-
-    color: #666;
-    text-align: center;
-    background-color:  #f2f2f2;
-    border: 1px solid #ccc;
-    width: 100%;
-  }
   .skillList {
 
     text-align: center;    
@@ -101,7 +93,7 @@
     During his studies in primary and secondary school, Angelico developed a love for (and excelled in) classes involving: Science, Technology, Engineering, and Mathematics. Ultimately, Angelico decided to pursue his post-secondary studies at the <b>University of Windsor</b>, and eventually obtained his <b>BCS </b><i>with Great Distinction</i><b> - Honours Computer Science</b> in May of 2017.
   </p>
   <p>
-    Currently, Angelico is working at <b>CIBC Private Wealth Management</b> as an <b>Administrative Assistant / Computer Programmer</b>. 
+    Currently, Angelico is working at <b>CIBC Private Wealth Management</b> as an <b>Administrative Assistant - Computer Programmer</b>. 
   </p>
   <p>
     On his free time, Angelico enjoys working on his personal projects to learn new (or sharpen his existing) technical skills. He also likes to ensure a healthy lifestyle by following a daily workout routine.
@@ -111,7 +103,7 @@
 <div class="container-fluid" id="skills">
   <h2>Skills</h2>
 
-  <div class="skillDetails"></div>
+  <!--<div class="skillDetails"></div>-->
 
   <div class="skillList"></div>
 
@@ -136,39 +128,23 @@
       }
   });
 
-  var skillDict = {
-    "Java": ["Languages", "* * * * -"],
-    "Python": ["Languages", "* * * * -"],
-    "C": ["Languages", "* * * - -"],
-    "C#": ["Languages", "* * * - -"],
-    "HTML": ["Languages", "* * * * -"],
-    "CSS": ["Languages", "* * * - -"],
-    "Javascript": ["Languages", "* * * - -"], 
-    "PHP": ["Languages", "* * * - -"],
-    "SQL": ["Languages", "* * * - -"],
-    "Git / Github": ["Tools", "* * * - -"],
-    "Eclipse": ["Tools", "* * * * -"],
-    "Android Studio": ["Tools", "* * - - -"],
-    "Microsoft Office": ["Tools", "* * * * -"]
-  };
+  var skillList = [
+    // Languages
+    "Java", "Python", "C", "C#", "HTML", "CSS", "JavaScript", "PHP",
 
-  var keyList = []
+    // Libraries / Frameworks
+    "Anaconda", "Bootstrap", "Ionic", "jQuery",
 
-  for(var key in skillDict){
+    // Databases
+    "SQLite", "MySQL", "MongoDB", "Firebase",
 
-    keyList.push(key);
-  }
+    // Tools
+    "Git", "Eclipse", "Visual Studio", "Microsoft Office"
+  ];
 
-  function skillDetails(i){
+  for(var i = 0 ; i < skillList.length ; i++){
 
-    $(".skillDetails").html("<h3 class='black'>" + keyList[i] + "</h3> <p>Category: <b class='black'>" + (skillDict[keyList[i]])[0] + "</b></p> <p>Proficiency: <b class='black'>" + (skillDict[keyList[i]])[1] + "</b></p>");
-  }
-
-  skillDetails(0);
-
-  for(var i = 0 ; i < keyList.length ; i++){
-
-   $(".skillList").append("<div class='skillListItem' onmouseover='skillDetails(" + i + ")'>" + keyList[i] + "</div> ");
+   $(".skillList").append("<div class='skillListItem'>" + skillList[i] + "</div> ");
   }
 </script>
 
