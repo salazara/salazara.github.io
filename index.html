@@ -28,7 +28,7 @@
   }
   #head h2 {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 25px;
     letter-spacing: 10px;
     font-weight: 400;
   }
@@ -42,11 +42,19 @@
     display: inline-block;
     margin: 10px;
   }
-  .link-container a {
+  .link-container * {
     color: #333;
   }
-  .link-container a:hover {
+  .link-container *:hover {
     color: #666;
+  }
+  .displayMobile {
+    display: none;
+  }
+  @media all and (max-width: 639px) {
+    .displayMobile {
+      display: block;
+    }
   }
   </style>
   <script type="text/javascript">
@@ -74,7 +82,9 @@
       SALAZAR
     </h1>
     <h2 style="margin-bottom: -10px">
-      SOFTWARE <span id="softwareTitle" style="letter-spacing: 10px; font-weight: 700"></span>
+      SOFTWARE<br class="displayMobile"/> 
+      <span id="softwareTitle" style="letter-spacing: 10px; font-weight: 700; font-size: 15px;
+    line-height: 25px"></span>
     </h2>
   </div>
 </div>
@@ -97,7 +107,7 @@
         </a>
   </div>
   <div class="link-container">
-   <a href="https://github.com/salazara/">
+        <a href="https://github.com/salazara/">
           <p class="fa-large-container">
             <i class="fa fa-large fa-github" style="font-size: 55px"></i>
           </p>
