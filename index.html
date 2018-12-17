@@ -21,10 +21,11 @@
   }
   #head {
     margin-top: -25px;
+    background-color: #eee;
   }
   #head h1 {
     letter-spacing: 10px;
-    font-weight: 700;
+    font-weight: 600;
   }
   #head h2 {
     font-size: 15px;
@@ -51,9 +52,15 @@
   .displayMobile {
     display: none;
   }
+  .displayDesktop {
+    display: block;
+  }
   @media all and (max-width: 639px) {
     .displayMobile {
       display: block;
+    }
+    .displayDesktop {
+      display: none;
     }
   }
   </style>
@@ -63,12 +70,20 @@
     var yearsOfExperience = new Date().getFullYear() - 2013;
     $('#yearsOfExperience').text(yearsOfExperience);
 
-    var softwareTitle = new Typed("#softwareTitle", {
+    var softwareTitleMobile = new Typed("#softwareTitleMobile", {
       strings: ["DEVELOPER", "ENGINEER", "INNOVATOR"],
       typeSpeed: 100,
       loop: true,
       showCursor: false,
-      backDelay: 3000
+      backDelay: 3000,
+    });
+
+    var softwareTitleDesktop = new Typed("#softwareTitleDesktop", {
+      strings: ["DEVELOPER", "ENGINEER", "INNOVATOR"],
+      typeSpeed: 100,
+      loop: true,
+      showCursor: false,
+      backDelay: 3000,
     });
 
   });
@@ -81,10 +96,19 @@
       ANGELICO<br/>
       SALAZAR
     </h1>
-    <h2 style="margin-bottom: -10px">
-      SOFTWARE<br class="displayMobile"/> 
-      <span id="softwareTitle" style="letter-spacing: 10px; font-weight: 700; font-size: 15px;
-    line-height: 25px"></span>
+    <h2 class="displayMobile" style="margin-bottom: -10px; height: 50px">
+      SOFTWARE<br/>
+      <span
+        id="softwareTitleDesktop" 
+        style="letter-spacing: 10px; font-weight: 700; font-size: 15px; line-height: 25px">
+      </span>
+    </h2>
+    <h2 class="displayDesktop" style="margin-bottom: -10px">
+      SOFTWARE 
+      <span
+        id="softwareTitleMobile" 
+        style="letter-spacing: 10px; font-weight: 700; font-size: 15px; line-height: 25px">
+      </span>
     </h2>
   </div>
 </div>
