@@ -10,34 +10,56 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <style>
+  body {
+    color: #aaa;
+    background: #080808;
+  }
   a {
     text-decoration: none;
   }
   p {
-    color: #333;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 2px;
   }
-  #head {
-    margin-top: -25px;
-    background-color: #eee;
+  strong {
+    color: #fff;
+    font-weight: 400;
   }
-  #head h1 {
-    letter-spacing: 10px;
-    font-weight: 600;
+  .hr {
+    height: 1px; 
+    width: 95%; 
+    background: #666; 
+    margin: 30px auto;
   }
-  #head h2 {
+  #banner {
+    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url('./salazara.jpg');
+    background-size: cover;
+  }
+  #banner h1 {
+    letter-spacing: 15px;
+    font-weight: 500;
+  }
+  #banner h2 {
     font-size: 15px;
     line-height: 25px;
     letter-spacing: 10px;
-    font-weight: 400;
+    font-weight: 300;
+    margin-bottom: -10px
+  }
+  .softwareTitle {
+    color: #fff;
+    letter-spacing: 10px; 
+    font-weight: 400; 
+    font-size: 15px; 
+    line-height: 25px;
   }
   .fa-large-container {
     text-align: center;
   }
   .fa-large {
-    font-size: 50px;
+    color: #ddd !important;
   }
   .link-container {
     display: inline-block;
@@ -61,6 +83,9 @@
     }
     .displayDesktop {
       display: none;
+    }
+    #banner h2 {
+      height: 60px;
     }
   }
   </style>
@@ -90,68 +115,70 @@
   </script>
 </head>
 <body>
-<div class="jumbotron" id="head">
-  <div class="container text-center">
-    <h1>
-      ANGELICO<br/>
-      SALAZAR
-    </h1>
-    <h2 class="displayMobile" style="margin-bottom: -10px; height: 50px">
-      SOFTWARE<br/>
-      <span
-        id="softwareTitleMobile" 
-        style="letter-spacing: 10px; font-weight: 700; font-size: 15px; line-height: 25px">
-      </span>
-    </h2>
-    <h2 class="displayDesktop" style="margin-bottom: -10px">
-      SOFTWARE 
-      <span
-        id="softwareTitleDesktop" 
-        style="letter-spacing: 10px; font-weight: 700; font-size: 15px; line-height: 25px">
-      </span>
-    </h2>
+  
+  <div id="banner" class="jumbotron">
+    <div class="container text-center">
+      <h1>
+        ANGELICO<br/>SALAZAR
+      </h1>
+      <h2 class="displayMobile">
+        SOFTWARE<br/>
+        <span
+          id="softwareTitleMobile"
+          class="softwareTitle">
+        </span>
+      </h2>
+      <h2 class="displayDesktop">
+        SOFTWARE 
+        <span
+          id="softwareTitleDesktop"
+          class="softwareTitle">
+        </span>
+      </h2>
+    </div>
   </div>
-</div>
 
-<div class="container-fluid text-center">
-  <p>
-    <strong><span id="yearsOfExperience"></span> years</strong> of experience <strong>leveraging technology</strong> to <strong>solve real-world problems</strong>.
-  </p>
-  <p>
-    Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>.
-  </p>
-</div>
-<hr/>
-<div class="container-fluid text-center">
-  <div class="link-container">
-        <a href="mailto:angelicosalazar@gmail.com">
-          <p class="fa-large-container">
-            <i class="fa fa-large fa-envelope"></i>
-          </p>
-        </a>
+  <div class="container-fluid text-center">
+    <p>
+      <strong><span id="yearsOfExperience"></span> years</strong> of experience <strong>leveraging technology</strong> to <strong>solve real-world problems</strong>.
+    </p>
+    <p>
+      Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>.
+    </p>
   </div>
-  <div class="link-container">
-        <a href="https://github.com/salazara/">
-          <p class="fa-large-container">
-            <i class="fa fa-large fa-github" style="font-size: 55px"></i>
-          </p>
-        </a>
+
+  <div class="hr"></div>
+  
+  <div class="container-fluid text-center">
+    <div class="link-container">
+          <a href="mailto:angelicosalazar@gmail.com">
+            <p class="fa-large-container">
+              <i class="fa fa-large fa-envelope" style="font-size: 50px"></i>
+            </p>
+          </a>
+    </div>
+    <div class="link-container">
+          <a href="https://github.com/salazara/">
+            <p class="fa-large-container">
+              <i class="fa fa-large fa-github" style="font-size: 55px"></i>
+            </p>
+          </a>
+    </div>
+    <div class="link-container">
+          <a href="https://www.linkedin.com/in/sangelico/">
+            <p class="fa-large-container">
+              <i class="fa fa-large fa-linkedin" style="font-size: 50px"></i>
+            </p>
+          </a>
+    </div>
+    <div class="link-container">
+          <a href="salazara-resume.pdf">
+            <p class="fa-large-container">
+              <i class="fa fa-large fa-file" style="font-size: 45px"></i>
+            </p>
+          </a>
+    </div>
   </div>
-  <div class="link-container">
-        <a href="https://www.linkedin.com/in/sangelico/">
-          <p class="fa-large-container">
-            <i class="fa fa-large fa-linkedin"></i>
-          </p>
-        </a>
-  </div>
-  <div class="link-container">
-        <a href="salazara-resume.pdf">
-          <p class="fa-large-container">
-            <i class="fa fa-large fa-file" style="font-size: 45px"></i>
-          </p>
-        </a>
-  </div>
-</div>
 
 </body>
 </html>
