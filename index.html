@@ -12,14 +12,13 @@
   <style>
   body {
     color: #fff;
-    background-color: #444;
-    text-shadow: 0 0 5px #000;
+    background-color: #333;
   }
   a {
     text-decoration: none;
   }
   p {
-    font-size: 15px;
+    font-size: 12px !important;
     font-weight: 300;
     letter-spacing: 2px;
   }
@@ -30,20 +29,21 @@
   .hr {
     height: 1px; 
     width: 95%; 
-    background: #999; 
+    background: #eee; 
     margin: 30px auto;
   }
-  #banner {
+  #body {
     background-color: #333;
     padding-top: 30px;
     padding-bottom: 55px;
+    height: 100vh;
   }
-  #banner h1 {
+  #body h1 {
     color: #fff;
     letter-spacing: 15px;
     font-weight: 500;
   }
-  #banner h2 {
+  #body h2 {
     color: #fff;
     font-size: 15px;
     line-height: 25px;
@@ -95,7 +95,7 @@
     .displayDesktop {
       display: none;
     }
-    #banner h2 {
+    #body h2 {
       height: 60px;
     }
   }
@@ -126,8 +126,7 @@
   </script>
 </head>
 <body>
-  
-  <div id="banner" class="jumbotron">
+  <div id="body" class="jumbotron">
     <div class="container text-center">
       <h1>
         ANGELICO<br/>
@@ -147,52 +146,51 @@
           class="softwareTitle">
         </span>
       </h2>
-      <img id="profileImage" src="./angelico.jpg"/>
+
+      <div style="height: 45px"></div>
+
+      <div class="container-fluid text-center">
+        <div class="link-container">
+              <a href="mailto:angelicosalazar@gmail.com">
+                <p class="fa-large-container">
+                  <i class="fa fa-large fa-envelope" style="font-size: 50px"></i>
+                </p>
+              </a>
+        </div>
+        <div class="link-container">
+              <a href="https://github.com/salazara/">
+                <p class="fa-large-container">
+                  <i class="fa fa-large fa-github" style="font-size: 55px"></i>
+                </p>
+              </a>
+        </div>
+        <div class="link-container">
+              <a href="https://www.linkedin.com/in/sangelico/">
+                <p class="fa-large-container">
+                  <i class="fa fa-large fa-linkedin" style="font-size: 50px"></i>
+                </p>
+              </a>
+        </div>
+        <div class="link-container">
+              <a href="salazara-resume.pdf">
+                <p class="fa-large-container">
+                  <i class="fa fa-large fa-file" style="font-size: 45px"></i>
+                </p>
+              </a>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <p>
+        <span id="yearsOfExperience"></span>+ years of experience leveraging technology to solve real-world problems.
+      </p>
+      
+      <p>
+        Currently heavily involved with Web / Mobile Application Development and Business Process Automation.
+      </p>
+
     </div>
   </div>
-
-  <div class="container-fluid text-center">
-    
-    <p>
-      <strong><span id="yearsOfExperience"></span> years</strong> of experience <strong>leveraging technology</strong> to <strong>solve real-world problems</strong>.
-    </p>
-    <p>
-      Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>.
-    </p>
-  </div>
-
-  <div class="hr"></div>
-  
-  <div class="container-fluid text-center">
-    <div class="link-container">
-          <a href="mailto:angelicosalazar@gmail.com">
-            <p class="fa-large-container">
-              <i class="fa fa-large fa-envelope" style="font-size: 50px"></i>
-            </p>
-          </a>
-    </div>
-    <div class="link-container">
-          <a href="https://github.com/salazara/">
-            <p class="fa-large-container">
-              <i class="fa fa-large fa-github" style="font-size: 55px"></i>
-            </p>
-          </a>
-    </div>
-    <div class="link-container">
-          <a href="https://www.linkedin.com/in/sangelico/">
-            <p class="fa-large-container">
-              <i class="fa fa-large fa-linkedin" style="font-size: 50px"></i>
-            </p>
-          </a>
-    </div>
-    <div class="link-container">
-          <a href="salazara-resume.pdf">
-            <p class="fa-large-container">
-              <i class="fa fa-large fa-file" style="font-size: 45px"></i>
-            </p>
-          </a>
-    </div>
-  </div>
-
 </body>
 </html>
