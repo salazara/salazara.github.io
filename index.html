@@ -1,196 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Angelico Salazar</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <style>
-  body {
-    color: #fff;
-    background-color: #333;
-  }
-  a {
-    text-decoration: none;
-  }
-  p {
-    font-size: 12px !important;
-    font-weight: 400;
-    letter-spacing: 2px;
-  }
-  strong {
-    color: #fff;
-    font-weight: 400;
-  }
-  .hr {
-    height: 1px; 
-    width: 90%; 
-    background: #eee; 
-    margin: 30px auto;
-  }
-  #body {
-    background-color: #333;
-    padding-top: 30px;
-    padding-bottom: 55px;
-    height: 100vh;
-  }
-  #body h1 {
-    color: #fff;
-    letter-spacing: 15px;
-    font-weight: 500;
-  }
-  #body h2 {
-    color: #fff;
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: 10px;
-    font-weight: 300;
-    margin-bottom: -10px;
-  }
-  #profileImage {
-    width: 250px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    margin-bottom: -25px;
-    margin-top: 40px;
-    box-shadow: 0px 0px 10px #111;
-  }
-  .softwareTitle {
-    color: #fff;
-    letter-spacing: 10px; 
-    font-weight: 500; 
-    font-size: 15px; 
-    line-height: 25px;
-  }
-  .fa-large-container {
-    text-align: center;
-  }
-  .fa-large {
-    color: #fff !important;
-  }
-  .link-container {
-    display: inline-block;
-    margin: 10px;
-  }
-  .link-container * {
-    color: #333;
-  }
-  .link-container *:hover {
-    color: #666;
-  }
-  .displayMobile {
-    display: none;
-  }
-  .displayDesktop {
-    display: block;
-  }
-  @media all and (max-width: 639px) {
-    .displayMobile {
-      display: block;
-    }
-    .displayDesktop {
-      display: none;
-    }
-    #body h2 {
-      height: 60px;
-    }
-  }
-  </style>
-  <script type="text/javascript">
-  $( document ).ready(function() {
+<html>
+  <head>
+    <title>Angelico Salazar - Full Stack Developer | Software Engineer</title>
+    <style>
 
-    var yearsOfExperience = new Date().getFullYear() - 2013;
-    $('#yearsOfExperience').text(yearsOfExperience);
+      /* global */
 
-    var softwareTitleMobile = new Typed("#softwareTitleMobile", {
-      strings: ["", "DEVELOPER", "ENGINEER", "INNOVATOR"],
-      typeSpeed: 100,
-      loop: true,
-      showCursor: false,
-      backDelay: 3000,
-    });
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        color: #fff;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      .content {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background: #000;
+      }
+      .mobile {
+        display: none;
+      }
+      @media (max-width: 925px) {
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+      }
 
-    var softwareTitleDesktop = new Typed("#softwareTitleDesktop", {
-      strings: ["", "DEVELOPER", "ENGINEER", "INNOVATOR"],
-      typeSpeed: 100,
-      loop: true,
-      showCursor: false,
-      backDelay: 3000,
-    });
+      /* main */
 
-  });
-  </script>
-</head>
-<body>
-  <div id="body" class="jumbotron">
-    <div class="container text-center">
-      <h1>
-        ANGELICO<br/>
-        SALAZAR
-      </h1>
-      <h2 class="displayMobile">
-        SOFTWARE<br/>
-        <span
-          id="softwareTitleMobile"
-          class="softwareTitle">
-        </span>
-      </h2>
-      <h2 class="displayDesktop">
-        SOFTWARE 
-        <span
-          id="softwareTitleDesktop"
-          class="softwareTitle">
-        </span>
-      </h2>
+      .main {
+        position: absolute;
+        top: 25%;
+        left: 50px;
+      }
+      .main > div {
+        vertical-align: top;
+        display: inline-block;
+      }
+      .main .left {
+        border-right: 2px solid #fff;
+        padding: 0px;
+        padding-right: 30px;
+      }
+      .main .left #name {
+        font-size: 45px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        margin: 0px;
+      }
+      .main .right {
+        padding-left: 30px;
+        padding-top: 15px;
+      }
+      .main .right #role {
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      .main .bottom {
+        padding-top: 35px;
+        display: block;
+      }
+      .main .bottom p {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 925px) {
+        .main {
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          letter-spacing: 5px;
+        }
+        .main > div {
+          display: block;
+        }
+        .main .left {
+          border: none;
+          padding: 0px !important;
+          padding-top: 40px !important;
+        }
+        .main .left #name {
+          text-align: center;
+          font-size: 30px;
+        }
+        .main .right {
+          padding: 0px !important;
+        }
+        .main .right #role {
+          text-align: center;
+          height: 30px;
+          font-size: 15px;
+          letter-spacing: 1px;
+        }
+        .main .bottom {
+          padding-top: 0px;
+        }
+        .main .bottom p {
+          padding-left: 30px;
+          padding-right: 30px;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 1px;
+          text-align: center;
+        }
+      }
 
-      <div style="height: 45px"></div>
+      /* socials */
 
-      <div class="container-fluid text-center">
-        <div class="link-container">
-              <a href="mailto:angelicosalazar@gmail.com">
-                <p class="fa-large-container">
-                  <i class="fa fa-large fa-envelope" style="font-size: 50px"></i>
-                </p>
-              </a>
+      .socials {
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        text-align: right;
+      }
+      .socials a {
+        margin: 0 15px;
+      }
+      .socials a svg {
+        fill: #fff;
+      }
+      .socials .email svg {
+        height: 90px;
+        margin-bottom: -5px;
+      }
+      .socials .github svg {
+        height: 75px;
+        margin-bottom: 5px;
+      }
+      .socials .linkedin svg {
+        height: 75px;
+        margin-bottom: 5px;
+      }
+      .socials .resume svg {
+        height: 95px;
+        margin-bottom: -5px;
+      }
+      @media (max-width: 925px) {
+        .socials {
+          margin: 0 auto;
+          margin-top: 55px;
+          position: relative;
+          text-align: center;
+          right: 0px;
+        }
+        .socials a {
+          margin: 0 8px;
+        }
+        .socials a svg {
+          fill: #fff;
+        }
+        .socials .email svg {
+          height: 32px;
+          margin-bottom: 0px;
+        }
+        .socials .github svg {
+          height: 25px;
+        }
+        .socials .linkedin svg {
+          height: 25px;
+        }
+        .socials .resume svg {
+          height: 30px;
+          margin-bottom: 2px;
+        }
+      }
+
+      /* video */
+      #video {
+        background: #000;
+        width: 100vw;
+        height: 100vh;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <video autoplay muted loop id="video">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <div class="main">
+        <div class="left">
+          <h1 id="name">
+            Angelico<br/>Salazar
+          </h1>
         </div>
-        <div class="link-container">
-              <a href="https://github.com/salazara/">
-                <p class="fa-large-container">
-                  <i class="fa fa-large fa-github" style="font-size: 55px"></i>
-                </p>
-              </a>
+        <div class="right">
+          <h2 id="role"></h2>
         </div>
-        <div class="link-container">
-              <a href="https://www.linkedin.com/in/sangelico/">
-                <p class="fa-large-container">
-                  <i class="fa fa-large fa-linkedin" style="font-size: 50px"></i>
-                </p>
-              </a>
-        </div>
-        <div class="link-container">
-              <a href="salazara-resume.pdf">
-                <p class="fa-large-container">
-                  <i class="fa fa-large fa-file" style="font-size: 45px"></i>
-                </p>
-              </a>
+        <div class="bottom">
+          <div id="socialsContainerMobile" class="mobile">
+          </div>
+          <p>
+            <strong><span id="yearsOfExperience"></span><sup>+</sup> years of experience</strong> leveraging technology to solve real-world problems
+          </p>
+          <p>
+            Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>
+          </p>
         </div>
       </div>
-
-      <div class="hr"></div>
-
-      <p>
-        <span id="yearsOfExperience"></span>+ years of experience leveraging technology to solve real-world problems.
-      </p>
-      
-      <p>
-        Currently heavily involved with Web / Mobile Application Development and Business Process Automation.
-      </p>
-
+      <div id="socialsContainerDesktop" class="desktop">
+        <div class="socials">
+          <a href="mailto:angelicosalazar@gmail.com" class="email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+              <path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/salazara/" class="github">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>      
+          </a>
+          <a href="https://www.linkedin.com/in/sangelico/" class="linkedin">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>   
+          </a>
+          <a href="salazara-resume.pdf" class="resume">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+              <path d="M0 0h24v24H0z" fill="none"/><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+
+      // calculate years of experience
+      var currentYear = new Date().getFullYear();
+      var yearsOfExperience = currentYear - 2017;
+      document.getElementById('yearsOfExperience').innerHTML = yearsOfExperience;
+
+      // apply typing animation to headline - role
+      var typed = new Typed('#role', {
+        strings: ['Full Stack Developer', 'Software Engineer'],
+        typeSpeed: 100,
+        backDelay: 3000,
+        showCursor: false,
+        loop: true
+      });
+
+      // add social links in mobile view
+      document.getElementById('socialsContainerMobile').innerHTML = document.getElementById('socialsContainerDesktop').innerHTML;
+    
+    </script>
+  </body>
 </html>
