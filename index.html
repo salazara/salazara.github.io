@@ -201,6 +201,15 @@
         background: rgba(0, 0, 0, 0.9);
       }
     
+      /* copyright */
+      .copyright {
+        position: absolute;
+        left: 25px;
+        bottom: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
     </style>
   </head>
   <body>
@@ -255,13 +264,17 @@
           </a>
         </div>
       </div>
+      <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> Angelico Salazar</p>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
 
-      // calculate years of experience
+      // calculate current year and years of experience
       var currentYear = new Date().getFullYear();
       var yearsOfExperience = currentYear - 2017;
+      document.getElementById('currentYear').innerHTML = currentYear;
       document.getElementById('yearsOfExperience').innerHTML = yearsOfExperience;
 
       // apply typing animation to headline - role
