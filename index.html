@@ -9,6 +9,7 @@
       body {
         margin: 0;
         padding: 0;
+        background: #000;
       }
       * {
         color: #fff;
@@ -92,7 +93,7 @@
         .main .left {
           border: none;
           padding: 0px !important;
-          padding-top: 40px !important;
+          padding-top: 20vh !important;
         }
         .main .left #name {
           text-align: center;
@@ -209,6 +210,13 @@
         font-size: 12px;
         letter-spacing: 1px;
       }
+      @media (max-width: 925px) {
+        .copyright {
+          margin-top: 40px;
+          position: static;
+          text-align: center;
+        }
+      }
 
     </style>
   </head>
@@ -238,6 +246,9 @@
           <p>
             Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>
           </p>
+          <p class="copyright mobile">
+            &copy; <span class="currentYear"></span> Angelico Salazar
+          </p>
         </div>
       </div>
       <div id="socialsContainerDesktop" class="desktop">
@@ -264,8 +275,8 @@
           </a>
         </div>
       </div>
-      <div class="copyright">
-        <p>&copy; <span id="currentYear"></span> Angelico Salazar</p>
+      <div class="copyright desktop">
+        <p>&copy; <span class="currentYear"></span> Angelico Salazar</p>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -273,8 +284,11 @@
 
       // calculate current year and years of experience
       var currentYear = new Date().getFullYear();
+      var currentYearElements = document.getElementsByClassName("currentYear")
       var yearsOfExperience = currentYear - 2017;
-      document.getElementById('currentYear').innerHTML = currentYear;
+      for (var i = 0 ; i < currentYearElements.length ; i++) {
+        currentYearElements[i].innerHTML = currentYear;
+      }
       document.getElementById('yearsOfExperience').innerHTML = yearsOfExperience;
 
       // apply typing animation to headline - role
