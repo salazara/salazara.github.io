@@ -241,7 +241,7 @@
           <div id="socialsContainerMobile" class="mobile">
           </div>
           <p>
-            <strong><span id="yearsOfExperience"></span><sup>+</sup> years of experience</strong> leveraging technology to solve real-world problems
+            <strong>5<sup>+</sup> years of experience</strong> leveraging technology to solve real-world problems
           </p>
           <p>
             Currently heavily involved with <strong>Web / Mobile Application Development</strong> and <strong>Business Process Automation</strong>
@@ -281,17 +281,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
-
-      // calculate current year and years of experience
+      // Determine current year.
       var currentYear = new Date().getFullYear();
       var currentYearElements = document.getElementsByClassName("currentYear")
-      var yearsOfExperience = currentYear - 2017;
       for (var i = 0 ; i < currentYearElements.length ; i++) {
         currentYearElements[i].innerHTML = currentYear;
       }
-      document.getElementById('yearsOfExperience').innerHTML = yearsOfExperience;
 
-      // apply typing animation to headline - role
+      // Apply typing animation on headline.
       var typed = new Typed('#role', {
         strings: ['Full Stack Developer', 'Software Engineer'],
         typeSpeed: 100,
@@ -300,9 +297,8 @@
         loop: true
       });
 
-      // add social links in mobile view
+      // Add social links in mobile view.
       document.getElementById('socialsContainerMobile').innerHTML = document.getElementById('socialsContainerDesktop').innerHTML;
-    
     </script>
   </body>
 </html>
