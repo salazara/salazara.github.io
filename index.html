@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Angelico Salazar - Full Stack Developer | Software Engineer</title>
+    <title>Angelico Salazar - Software Engineer | Full Stack Developer</title>
     <style>
       body {
         margin: 0;
         padding: 0;
         background: #000;
       }
+
       * {
         color: #fff;
         font-family: Verdana, Geneva, sans-serif;
       }
+
       a {
         text-decoration: none;
       }
+
       .content {
         position: relative;
         height: 100vh;
         width: 100vw;
         background: #000;
       }
+
       .mobile {
         display: none;
       }
+
       @media (max-width: 925px) {
         .desktop {
           display: none;
         }
+
         .mobile {
           display: block;
         }
@@ -38,15 +44,18 @@
         top: 25%;
         left: 10%;
       }
+
       .main > div {
         vertical-align: top;
         display: inline-block;
       }
+
       .main .left {
         border-right: 2px solid #fff;
         padding: 0px;
         padding-right: 30px;
       }
+
       .main .left #name {
         font-size: 45px;
         font-weight: 600;
@@ -54,20 +63,24 @@
         letter-spacing: 10px;
         margin: 0px;
       }
+
       .main .right {
         padding-left: 30px;
         padding-top: 22px;
       }
+
       .main .right #role {
         font-size: 22px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 5px;
       }
+
       .main .bottom {
         padding-top: 35px;
         display: block;
       }
+
       .main .bottom p {
         font-size: 15px;
         line-height: 30px;
@@ -75,6 +88,7 @@
         padding-right: 30px;
         margin-bottom: 20px;
       }
+
       @media (max-width: 925px) {
         .main {
           top: 0px;
@@ -82,30 +96,37 @@
           width: 100%;
           letter-spacing: 5px;
         }
+
         .main > div {
           display: block;
         }
+
         .main .left {
           border: none;
           padding: 0px !important;
           padding-top: 20vh !important;
         }
+
         .main .left #name {
           text-align: center;
           font-size: 30px;
         }
+
         .main .right {
           padding: 0px !important;
         }
+
         .main .right #role {
           text-align: center;
           height: 30px;
           font-size: 15px;
           letter-spacing: 1px;
         }
+
         .main .bottom {
           padding-top: 0px;
         }
+
         .main .bottom p {
           padding-left: 30px;
           padding-right: 30px;
@@ -122,28 +143,35 @@
         right: 20px;
         text-align: right;
       }
+
       .socials a {
         margin: 0 15px;
       }
+
       .socials a svg {
         fill: #fff;
       }
+
       .socials .email svg {
         height: 90px;
         margin-bottom: -5px;
       }
+
       .socials .github svg {
         height: 75px;
         margin-bottom: 5px;
       }
+
       .socials .linkedin svg {
         height: 75px;
         margin-bottom: 5px;
       }
+
       .socials .resume svg {
         height: 95px;
         margin-bottom: -5px;
       }
+
       @media (max-width: 925px) {
         .socials {
           margin: 0 auto;
@@ -152,22 +180,28 @@
           text-align: center;
           right: 0px;
         }
+
         .socials a {
           margin: 0 8px;
         }
+
         .socials a svg {
           fill: #fff;
         }
+
         .socials .email svg {
           height: 32px;
           margin-bottom: 0px;
         }
+
         .socials .github svg {
           height: 25px;
         }
+
         .socials .linkedin svg {
           height: 25px;
         }
+
         .socials .resume svg {
           height: 30px;
           margin-bottom: 2px;
@@ -185,6 +219,7 @@
         -o-filter: grayscale(100%);
         filter: grayscale(100%);
       }
+
       .video .tint {
         position: absolute;
         top: 0px;
@@ -201,6 +236,7 @@
         font-size: 12px;
         letter-spacing: 1px;
       }
+      
       @media (max-width: 925px) {
         .copyright {
           margin-top: 40px;
@@ -209,6 +245,19 @@
         }
       }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYD9VJS1MT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(){
+        dataLayer.push(arguments);
+      
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-LYD9VJS1MT');
+    </script>
   </head>
   <body>
     <div class="content">
@@ -280,7 +329,7 @@
 
       // Apply typing animation on headline.
       var typed = new Typed('#role', {
-        strings: ['Full Stack Developer', 'Software Engineer'],
+        strings: ['Software Engineer', 'Full Stack Developer'],
         typeSpeed: 100,
         backDelay: 3000,
         showCursor: false,
